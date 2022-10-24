@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="utf-8" />
+	<title>Color Admin | Page Blank</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	<!--coneccion a archivo de validacion-->
+	<script src="formulario.js"></script>
+	<!-- ================== BEGIN core-css ================== -->
+	<link href="../assets/css/vendor.min.css" rel="stylesheet" />
+	<link href="../assets/css/transparent/app.min.css" rel="stylesheet" />
+	<!-- ================== END core-css ================== -->
+</head>
+<body>
+	<!-- BEGIN page-cover -->
+	<div class="app-cover"></div>
+	<!-- END page-cover -->
+	
+	<!-- BEGIN #loader -->
+	<div id="loader" class="app-loader">
+		<span class="spinner"></span>
+	</div>
+	<!-- END #loader -->
+	<form action="" name="form" id="form" onsubmit="return validacion()">
+		<!-- BEGIN #app -->
+		<div id="app" class="app app-header-fixed app-sidebar-fixed">
+	
+			<!-- BEGIN #header -->
+			<div id="header" class="app-header">
+				<!-- BEGIN navbar-header -->
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand"><span class="navbar-logo"></span> <b class="me-1">Color</b> Admin</a>
+					<button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- END navbar-header -->
+				<!-- BEGIN header-nav -->
+				<div class="navbar-nav">
+					<div class="navbar-item navbar-user dropdown">
+						<a href="#" class="navbar-link dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+							<img src="../assets/img/user/user-13.jpg" alt="" /> 
+							<span>
+								<span class="d-none d-md-inline">Adam Schwartz</span>
+								<b class="caret"></b>
+							</span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-end me-1">
+							<a href="index.html" class="dropdown-item">Salir</a>
+						</div>
+					</div>
+				</div>
+				<!-- END header-nav -->
+			</div>
+			<!-- END #header -->
+		
+			<!-- BEGIN #sidebar -->
+			<div id="sidebar" class="app-sidebar">
+				<!-- BEGIN scrollbar -->
+				<div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+					<!-- BEGIN menu -->
+					<div class="menu">
+						<div class="menu-profile">
+							<a href="javascript:;" class="menu-profile-link" data-toggle="app-sidebar-profile" data-target="#appSidebarProfileMenu">
+								<div class="menu-profile-cover with-shadow"></div>
+								<div class="menu-profile-image">
+									<img src="../assets/img/user/user-13.jpg" alt="" />
+								</div>
+								<div class="menu-profile-info">
+									<div class="d-flex align-items-center">
+										<div class="flex-grow-1">
+											Sean Ngu
+										</div>
+									</div>
+									<small>Front end developer</small>
+								</div>
+							</a>
+						</div>
+						
+						<!-- BEGIN minify-button -->
+						<div class="menu-item d-flex">
+							<a href="javascript:;" class="app-sidebar-minify-btn ms-auto" data-toggle="app-sidebar-minify"><i class="fa fa-angle-double-left"></i></a>
+						</div>
+						<!-- END minify-button -->
+					</div>
+					<!-- END menu -->
+				</div>
+				<!-- END scrollbar -->
+			</div>
+			<div class="app-sidebar-bg"></div>
+			<div class="app-sidebar-mobile-backdrop"><a href="#" data-dismiss="app-sidebar-mobile" class="stretched-link"></a></div>
+			<!-- END #sidebar -->
+			
+			<!-- BEGIN #content Datos personales-->
+			<div id="content" class="app-content">
+				<!-- BEGIN page-header -->
+				<h1 class="page-header">Solicitud de empleo</h1>
+				<!-- END page-header -->
+				<!-- BEGIN panel -->
+				<div class="panel panel-inverse">
+					<div class="panel-heading">
+						<h4 class="panel-title">Datos personales</h4>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label class="form-label">Tipo de identificaci&oacute;n</label>
+									<select class="form-select" name="slc_tipo_indentificacion">
+										<option value="">Seleccione</option>
+										<option value="NA">Nacional</option>
+										<option value="EX">Extranjero</option>
+									</select>
+								</div>
+							</div>						
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label class="form-label">N&uacute;mero de identificaci&oacute;n</label>
+									<input class="form-control" type="number" name="txt_identificacion" placeholder="N&uacute;mero de identificaci&oacute;n" />
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label class="form-label">Nombre</label>
+									<input class="form-control" type="text" name="txt_nombre_personales" placeholder="Nombre" />
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label class="form-label">Apellidos</label>
+									<input class="form-control" type="text" name="txt_apellido_personales" placeholder="Apellidos" />
+								</div>
+							</div>
+							<hr/>	
+							<div class="col-md-3">
+								<label class="form-label col-form-label col-md-12">Sexo</label>
+								<div class="col-md-9 pt-2">
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="rd_sexo" id="rd_femenino" value="f"/>
+										<label class="form-check-label">Femenino</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input" type="radio" name="rd_sexo" id="rd_masculino" value="m"/>
+										<label class="form-check-label">Masculino</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="mb-3">
+									<label class="form-label">Fecha de nacimiento</label>
+									<input type="date" class="form-control" name="txt_fecha"/>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="mb-3">
+									<label class="form-label">Lugar de nacimiento</label>
+									<input class="form-control" type="text" placeholder="Lugar de nacimiento" name="txt_lugarnacimiento"/>
+								</div>
+							</div>	
+							<div class="col-md-3">
+								<div class="mb-3">
+									<label class="form-label">Nacionalidad</label>
+									<input class="form-control" type="text" placeholder="Nacionalidad" name="txt_nacionalidad"/>
+								</div>
+							</div>	
+							<hr />	
+							<div class="col-md-4">
+								<div class="mb-4">
+									<label class="form-label">Estado Civil</label>
+									<select class="form-select" name="slc_estadocivil">
+										<option value="">Seleccione</option>
+										<option value="Soltero">Soltero (a)</option>
+										<option value="Casado">Casado (a)</option>
+										<option value="Divorciado">Divorciado (a)</option>
+										<option value="proceso">Separaci&oacute;n en proceso judicial</option>	
+										<option value="Viudo">Viudo</option>
+										<option value="Concubinato">Concubinato</option>								
+									</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="mb-3">
+									<label class="form-label">N&uacute;mero telef&oacute;nico</label>
+									<input class="form-control" type="number" placeholder="N&uacute;mero telef&oacute;nico" name="txt_telefono_personales"/>
+								</div>
+							</div>	
+							<div class="col-md-4">
+								<div class="mb-3">
+									<label class="form-label">Correo electr&oacute;nico</label>
+									<input class="form-control" type="email" placeholder="Correo electr&oacute;nico" name="txt_correo"/>
+								</div>
+							</div>	
+							<div class="col-md-6">
+								<div class="mb-3">
+									<label class="form-label">Domicilio</label>
+									<input class="form-control" type="text" placeholder="Domicilio" name="txt_domicilio"/>
+								</div>
+							</div>	
+							<div class="col-md-6">
+								<div class="mb-4">
+									<label class="form-label">Provincia</label>
+									<select class="form-select" name="slc_provincia">
+										<option value="">Seleccione</option>
+										<option value="SJ">San Jose</option>
+										<option value="AL">Alajuela</option>
+										<option value="CA">Cartago</option>
+										<option value="HE">Heredia</option>	
+										<option value="GN">Guanacaste</option>
+										<option value="PN">Puntarenas</option>	
+										<option value="LM">Lim&oacute;n</option>								
+									</select>
+								</div>
+							</div>																																																						
+						</div>
+					</div>				
+				</div>
+				<!-- END panel -->
+			</div>
+			<!-- END #content -->
+	
+			<!-- BEGIN #content Datos familiares-->
+			<div id="content" class="app-content">
+				<!-- BEGIN panel -->
+				<div class="panel panel-inverse">
+					<div class="panel-heading">
+						<h4 class="panel-title">Datos familiares (Familiares que vivan con usted)</h4>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-12">
+								<!-- BEGIN table-responsive -->
+								<div class="table-responsive">
+									<table class="table table-striped mb-0">
+										<thead>
+											<tr>
+												<th>Apellidos y Nombres</th>
+												<th>Sexo</th>
+												<th>Edad</th>
+												<th>Parentesco que tiene con usted</th>
+												<th>Ocupaci&oacute;n</th>											
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="text" class="form-control" id="txt_apellidos_nombres0"/></td>
+												<td>
+													<select class="form-select" id="slc_sexo0">
+														<option value="">Seleccione</option>
+														<option value="f">Femenino</option>
+														<option value="m">Masculino</option>
+													</select>
+												</td>
+												<td><input type="text" class="form-control" id="txt_edad0"/></td>
+												<td><input type="text" class="form-control" id="txt_parentesco0"/></td>
+												<td><input type="text" class="form-control" id="txt_ocupacion0"/></td>											
+											</tr>
+											<tr>
+												<td><input type="text" class="form-control" id="txt_apellidos_nombres1"/></td>
+												<td>
+													<select class="form-select" id="slc_sexo1">
+														<option value="">Seleccione</option>
+														<option value="f">Femenino</option>
+														<option value="m">Masculino</option>
+													</select>
+												</td>
+												<td><input type="text" class="form-control" id="txt_edad1"/></td>
+												<td><input type="text" class="form-control" id="txt_parentesco1"/></td>
+												<td><input type="text" class="form-control" id="txt_ocupacion1"/></td>											
+											</tr>
+											<tr>
+												<td><input type="text" class="form-control" id="txt_apellidos_nombres2"/></td>
+												<td>
+													<select class="form-select" id="slc_sexo2">
+														<option value="">Seleccione</option>
+														<option value="f">Femenino</option>
+														<option value="m">Masculino</option>
+													</select>
+												</td>
+												<td><input type="text" class="form-control" id="txt_edad2"/></td>
+												<td><input type="text" class="form-control" id="txt_parentesco2"/></td>
+												<td><input type="text" class="form-control" id="txt_ocupacion2"/></td>											
+											</tr>
+											<tr>
+												<td><input type="text" class="form-control" id="txt_apellidos_nombres3"/></td>
+												<td>
+													<select class="form-select" id="slc_sexo3">
+														<option value="">Seleccione</option>
+														<option value="f">Femenino</option>
+														<option value="m">Masculino</option>
+													</select>
+												</td>
+												<td><input type="text" class="form-control" id="txt_edad3"/></td>
+												<td><input type="text" class="form-control" id="txt_parentesco3"/></td>
+												<td><input type="text" class="form-control" id="txt_ocupacion3"/></td>											
+											</tr>
+											<tr>
+												<td><input type="text" class="form-control" id="txt_apellidos_nombres4"/></td>
+												<td>
+													<select class="form-select" id="slc_sexo4">
+														<option value="">Seleccione</option>
+														<option value="f">Femenino</option>
+														<option value="m">Masculino</option>
+													</select>
+												</td>
+												<td><input type="text" class="form-control" id="txt_edad4"/></td>
+												<td><input type="text" class="form-control" id="txt_parentesco4"/></td>
+												<td><input type="text" class="form-control" id="txt_ocupacion4"/></td>											
+											</tr>																														
+										</tbody>
+									</table>
+								</div>
+								<!-- END table-responsive -->
+							</div>																																																											
+						</div>
+					</div>				
+				</div>
+				<!-- END panel -->
+			</div>
+			<!-- END #content -->	
+			
+			<!-- BEGIN #content Datos de educación-->
+			<div id="content" class="app-content">
+				<!-- BEGIN panel -->
+				<div class="panel panel-inverse">
+					<div class="panel-heading">
+						<h4 class="panel-title">Datos de educaci&oacute;n</h4>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-12">
+								<!-- BEGIN table-responsive -->
+								<div class="table-responsive">
+									<table class="table table-striped mb-0">
+										<thead>
+											<tr>
+												<th>Actualmente estudia</th>
+												<th>Que estudia</th>
+												<th>Donde estudia</th>											
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>							
+													<div class="col-md-9 pt-2">
+														<div class="form-check form-check-inline">
+															<input class="form-check-input" type="radio" onclick="habilitar_estudio(this.value)" name="rd_est" id="rd_est_si" value="s"/>
+															<label class="form-check-label">Si</label>
+														</div>
+														<div class="form-check form-check-inline">
+															<input class="form-check-input" type="radio" onclick="habilitar_estudio(this.value)" name="rd_est" id="rd_est_no" value="n"/>
+															<label class="form-check-label">No</label>
+														</div>
+													</div>
+												</td>
+												<td><input type="text" class="form-control" name="txt_queestudia" id="txt_queestudia"/></td>	
+												<td><input type="text" class="form-control" name="txt_dondeestudia" id="txt_dondeestudia"/></td>										
+											</tr>																														
+										</tbody>
+									</table>
+								</div>
+								<!-- END table-responsive -->							
+								<!-- BEGIN table-responsive -->
+								<div class="table-responsive">
+									<table class="table table-striped mb-0">
+										<thead>
+											<tr>
+												<th>Nivel cademico</th>
+												<th>Desde</th>
+												<th>Hasta</th>
+												<th>T&iacute;tulo obtenido</th>
+												<th>Instituci&oacute;n Acad&eacute;mica</th>											
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Primaria</td>
+												<td><input type="date" class="form-control"  id="txt_fecha_estudio0"/></td>
+												<td><input type="date" class="form-control"  id="txt_fecha_estudio1"/></td>
+												<td><input type="text" class="form-control"  id="txt_titulo0"/></td>
+												<td><input type="text" class="form-control"  id="txt_institucion0"/></td>											
+											</tr>
+											<tr>
+												<td>Secundaria</td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio2"/></td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio3"/></td>
+												<td><input type="text" class="form-control" id="txt_titulo1"/></td>
+												<td><input type="text" class="form-control" id="txt_institucion1"/></td>											
+											</tr>
+											<tr>
+												<td>Comercial</td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio4"/></td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio5"/></td>
+												<td><input type="text" class="form-control" id="txt_titulo2"/></td>
+												<td><input type="text" class="form-control" id="txt_institucion2"/></td>											
+											</tr>
+											<tr>
+												<td>T&eacute;cnico</td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio6"/></td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio7"/></td>
+												<td><input type="text" class="form-control" id="txt_titulo3"/></td>
+												<td><input type="text" class="form-control" id="txt_institucion3"/></td>											
+											</tr>
+											<tr>
+												<td>Universitario</td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio8"/></td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio9"/></td>
+												<td><input type="text" class="form-control" id="txt_titulo4"/></td>
+												<td><input type="text" class="form-control" id="txt_institucion4"/></td>											
+											</tr>
+											<tr>
+												<td>Especialidad</td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio10"/></td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio11"/></td>
+												<td><input type="text" class="form-control" id="txt_titulo5"/></td>
+												<td><input type="text" class="form-control" id="txt_institucion5"/></td>											
+											</tr>
+											<tr>
+												<td>Maestria</td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio12"/></td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio13"/></td>
+												<td><input type="text" class="form-control" id="txt_titulo6"/></td>
+												<td><input type="text" class="form-control" id="txt_institucion6"/></td>											
+											</tr>
+											<tr>
+												<td>Otros estudios</td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio14"/></td>
+												<td><input type="date" class="form-control" id="txt_fecha_estudio15"/></td>
+												<td><input type="text" class="form-control" id="txt_titulo7"/></td>
+												<td><input type="text" class="form-control" id="txt_institucion7"/></td>											
+											</tr>
+											<tr>
+												<td>Idiomas ¿cuales?</td>
+												<td><input type="date" class="form-control"id="txt_fecha_estudio16"/></td>
+												<td><input type="date" class="form-control"id="txt_fecha_estudio17"/></td>
+												<td><input type="text" class="form-control"id="txt_titulo8"/></td>
+												<td><input type="text" class="form-control"id="txt_institucion8"/></td>											
+											</tr>	
+											<tr>
+												<td>Otras actividades que desarrolla</td>
+												<td colspan="4">
+													<div class="col-md-9 pt-2">
+														<div class="form-check form-check-inline">
+															<input class="form-check-input" type="checkbox" name="txt_actividades1"id="inlineCheckbox1" value="option1">
+															<label class="form-check-label" for="inlineCheckbox1">Manuales</label>
+														</div>
+														<div class="form-check form-check-inline">
+															<input class="form-check-input" type="checkbox" name="txt_actividades2" id="inlineCheckbox2" value="option2">
+															<label class="form-check-label" for="inlineCheckbox2">Docentes</label>
+														</div>
+														<div class="form-check form-check-inline">
+															<input class="form-check-input" type="checkbox" name="txt_actividades3" id="inlineCheckbox1" value="option1">
+															<label class="form-check-label" for="inlineCheckbox1">Artisticas</label>
+														</div>
+														<div class="form-check form-check-inline">
+															<input class="form-check-input" type="checkbox" name="txt_actividades4" id="inlineCheckbox2" value="option2">
+															<label class="form-check-label" for="inlineCheckbox2">Deportivas</label>
+														</div>	
+														<div class="form-check form-check-inline">
+															<input class="form-check-input" type="checkbox" name="txt_actividades5" id="inlineCheckbox2" value="option2">
+															<label class="form-check-label" for="inlineCheckbox2">Otras</label>
+														</div>																									
+													</div>
+												</td>											
+											</tr>																																																																															
+										</tbody>
+									</table>
+								</div>
+								<!-- END table-responsive -->
+							</div>																																																											
+						</div>
+					</div>				
+				</div>
+				<!-- END panel -->
+			</div>
+			<!-- END #content -->	
+			
+			<!-- BEGIN #content Datos de experiencia de trabajo-->
+			<div id="content" class="app-content">
+				<!-- BEGIN panel -->
+				<div class="panel panel-inverse">
+					<div class="panel-heading">
+						<h4 class="panel-title">Datos de experiencia de trabajo (&Uacute;ltimo trabajo efectuado)</h4>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mb-3">
+									<label class="form-label">Principales funciones</label>
+									<textarea class="form-control" id="txt_area1" style="resize: none;" rows="5"></textarea>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="mb-3">
+									<label class="form-label">Equipo operado</label>
+									<textarea class="form-control" id="txt_area2" style="resize: none;" rows="5"></textarea>
+								</div>
+							</div>																																																																		
+						</div>
+					</div>				
+				</div>
+				<!-- END panel -->
+			</div>
+			<!-- END #content -->			
+			
+			<!-- BEGIN #content Referencias-->
+			<div id="content" class="app-content">
+				<!-- BEGIN panel -->
+				<div class="panel panel-inverse">
+					<div class="panel-heading">
+						<h4 class="panel-title">Referencias</h4>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-12">
+								<!-- BEGIN table-responsive -->
+								<div class="table-responsive">
+									<table class="table table-striped mb-0">
+										<thead>
+											<tr>
+												<th>Nombre</th>
+												<th>Lugar de trabajo</th>
+												<th>Puesto</th>
+												<th>Tel&eacute;fono</th>
+												<th>Tiempo de concerlo</th>											
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><input type="text" id ="inp_nombre1" class="form-control"/></td>
+												<td><input type="text" id ="inp_texto1" class="form-control"/></td>
+												<td><input type="text" id ="inp_texto2" class="form-control"/></td>
+												<td><input type="text" id ="inp_numerotelefono1" class="form-control"/></td>
+												<td><input type="text" id ="inp_tiempo1" class="form-control"/></td>											
+											</tr>
+											<tr>
+												<td><input type="text" id ="inp_nombre2" class="form-control"/></td>
+												<td><input type="text" id ="inp_texto3" class="form-control"/></td>
+												<td><input type="text" id ="inp_texto4" class="form-control"/></td>
+												<td><input type="text" id ="inp_numerotelefono2" class="form-control"/></td>
+												<td><input type="text" id ="inp_tiempo2" class="form-control"/></td>											
+											</tr>
+											<tr>
+												<td><input type="text" id ="inp_nombre3" class="form-control"/></td>
+												<td><input type="text" id ="inp_texto5" class="form-control"/></td>
+												<td><input type="text" id ="inp_texto6" class="form-control"/></td>
+												<td><input type="text" id ="inp_numerotelefono3" class="form-control"/></td>
+												<td><input type="text" id ="inp_tiempo3" class="form-control"/></td>											
+											</tr>
+											<tr>
+												<td><input type="text" id ="inp_nombre4" class="form-control"/></td>
+												<td><input type="text" id ="inp_texto7" class="form-control"/></td>
+												<td><input type="text" id ="inp_texto8" class="form-control"/></td>
+												<td><input type="text" id ="inp_numerotelefono4" class="form-control"/></td>
+												<td><input type="text" id ="inp_tiempo4" class="form-control"/></td>											
+											</tr>
+											<tr>
+												<td><input type="text" id ="inp_nombre5" class="form-control"/></td>
+												<td><input type="text" id ="inp_texto9" class="form-control"/></td>
+												<td><input type="text" id ="inp_texto10" class="form-control"/></td>
+												<td><input type="text" id ="inp_numerotelefono5" class="form-control"/></td>
+												<td><input type="text" id ="inp_tiempo5" class="form-control"/></td>											
+											</tr>																														
+										</tbody>
+									</table>
+								</div>
+								<!-- END table-responsive -->
+							</div>																																																											
+						</div>
+					</div>				
+				</div>
+				<button type="submit" class="btn btn-primary w-100px me-5px">Validar</button>
+				<button type="reset" class="btn btn-default w-100px">Borrar</button>
+				<!-- END panel -->
+			</div>
+			<!-- END #content -->	
+	
+			<!-- BEGIN scroll-top-btn -->
+			<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top" data-toggle="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+			<!-- END scroll-top-btn -->
+			
+		</div>
+		<!-- END #app -->
+	</form>
+	<!-- ================== BEGIN core-js ================== -->
+	<script src="../assets/js/vendor.min.js"></script>
+	<script src="../assets/js/app.min.js"></script>
+	<!-- ================== END core-js ================== -->
+</body>
+</html>
