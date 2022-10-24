@@ -1,3 +1,4 @@
+/*Codigo Creado por José Fabián Cortés Fedullo*/
 function validacion(){
 
     if(!dt_personales()){
